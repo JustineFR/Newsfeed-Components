@@ -88,6 +88,17 @@ const data = [
   }
 ];
 
+
+window.addEventListener('load', (e) => {
+
+const articles = document.querySelector('.articles')
+
+data.forEach(item => {
+  console.log(item)
+  articles.appendChild(createArticle(item.title, item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph))
+})
+
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
@@ -108,17 +119,17 @@ const data = [
   function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
 
     // create elements
-    const article = document.createElement('div')
-    const title = document.createElement('h2')
-    const date= document.createElement('p')
-    const firstPara = document.createElement('p')
-    const secondPara = document.createElement('p')
-    const thirdPara = document.createElement('p')
-    const button = document.createElement('span')
+    const article = document.createElement('div');
+    const articleTitle = document.createElement('h2');
+    const articleDate= document.createElement('p');
+    const firstPara = document.createElement('p');
+    const secondPara = document.createElement('p');
+    const thirdPara = document.createElement('p');
+    const button = document.createElement('span');
 
     // setup structure
-    article.appendChild(title);
-    article.appendChild(date);
+    article.appendChild(articleTitle);
+    article.appendChild(articleDate);
     article.appendChild(firstPara);
     article.appendChild(secondPara);
     article.appendChild(thirdPara);
@@ -126,14 +137,15 @@ const data = [
 
     // Add classes
     article.classList.add('article');
-    date.classList.add('title');
-    button.classList.add('expandButton')
+    articleDate.classList.add('date');
+    button.classList.add('expandButton');
 
     // Add content
-    h2.textContent = title;
-    date.textContent = date;
+    button.textContent = "expand"
+    articleTitle.textContent = title;
+    articleDate.textContent = date;
     firstPara.textContent = firstParagraph;
-    secondPara.textContent = secondParagrap;
+    secondPara.textContent = secondParagraph;
     thirdPara.textContent = thirdParagraph;
 
 
@@ -149,12 +161,16 @@ const data = [
 
   }
 
-
+})
   /*
 
 
   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+*/
 
+
+
+/*
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
