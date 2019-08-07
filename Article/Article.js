@@ -108,7 +108,6 @@ window.addEventListener('load', (e) => {
 const articles = document.querySelector('.articles')
 
 data.forEach(item => {
-  console.log(item)
   articles.appendChild(createArticle(item.title, item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph))
 })
 
