@@ -106,6 +106,8 @@ const data = [
   */
 
   function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+
+    // create elements
     const article = document.createElement('div')
     const title = document.createElement('h2')
     const date= document.createElement('p')
@@ -113,6 +115,27 @@ const data = [
     const secondPara = document.createElement('p')
     const thirdPara = document.createElement('p')
     const button = document.createElement('span')
+
+    // setup structure
+    article.appendChild(title);
+    article.appendChild(date);
+    article.appendChild(firstPara);
+    article.appendChild(secondPara);
+    article.appendChild(thirdPara);
+    article.appendChild(button);
+
+    // Add classes
+    article.classList.add('article');
+    date.classList.add('title');
+    button.classList.add('expandButton')
+
+    // Add content
+    h2.textContent = title;
+    date.textContent = date;
+    firstPara.textContent = firstParagraph;
+    secondPara.textContent = secondParagrap;
+    thirdPara.textContent = thirdParagraph;
+
   }
 
 
