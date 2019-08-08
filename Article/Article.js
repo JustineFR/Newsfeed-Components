@@ -103,7 +103,7 @@ const data = [
 ];
 
 
-window.addEventListener('load', (e) => {
+
 
 const articles = document.querySelector('.articles')
 
@@ -154,7 +154,7 @@ data.forEach(item => {
     button.classList.add('expandButton');
 
     // Add content
-    button.textContent = "expand"
+    button.textContent = "Click here"
     articleTitle.textContent = title;
     articleDate.textContent = date;
     firstPara.textContent = firstParagraph;
@@ -174,7 +174,7 @@ data.forEach(item => {
 
   }
 
-})
+
   /*
 
 

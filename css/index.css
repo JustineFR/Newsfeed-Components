@@ -48,6 +48,7 @@
   height: 50px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
+  transition: 0.4s height;
 }
 .article h2 {
   font-size: 28px;
@@ -82,10 +83,10 @@
   cursor: pointer;
 }
 .menu {
-  display: none;
+  display: block;
   position: fixed;
   top: 75px;
-  left: 0;
+  left:-350px;
   width: 350px;
   height: 100vh;
   /* This give the height 100% of the screen or, '100% of View Height' */
@@ -94,6 +95,7 @@
   border-left: none;
   border-bottom: none;
   z-index: 2;
+  transition: 0.5s;
   /* This set the layer level of the element, it has precendence over initial level of 1*/
 }
 .menu ul li {
@@ -103,7 +105,9 @@
   text-align: center;
 }
 .menu--open {
+  /* position: absolute; */
   display: block;
+  left:0;
 }
 html,
 body {

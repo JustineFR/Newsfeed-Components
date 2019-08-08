@@ -6,7 +6,7 @@ let menuItems = [
   "What's New",
   'Tech Trends',
   'Music',
-  'Log Out'
+  'Log Out',
 ];
 
 /* 
@@ -22,11 +22,12 @@ let menuItems = [
   Pass the function an array as it's only argument.
 */
 
-window.addEventListener('load', (e) => {
 
 
-const body = document.querySelector('body')
-body.appendChild(createMenu(menuItems))
+
+const header = document.querySelector('.header')
+header.appendChild(createMenu(menuItems))
+
 
 function createMenu(arr) {
   // Create elements
@@ -54,11 +55,14 @@ function createMenu(arr) {
     menu.classList.toggle('menu--open')
   })
 
+  
   // Step 5: Return the menu component
   return menu;
 }
 
-})
+
+
+TweenMax.to(".menu--open", 6, {left:300})
 /*
 
 
@@ -74,3 +78,6 @@ function createMenu(arr) {
   Step 6: add the menu component to the DOM.
   
 */
+
+
+
